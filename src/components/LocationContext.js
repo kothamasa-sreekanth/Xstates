@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "../App.css";
 
 const API_BASE = "https://crio-location-selector.onrender.com";
@@ -100,13 +100,10 @@ const LocationSelector = () => {
         </select>
       </div>
 
-      {/* Display Selected Location */}
-   {/* Display Selected Location */}
-      {selectedCity && (
+      {/* Fixed Display of Selected Location */}
+      {selectedCity && selectedState && selectedCountry && (
         <div className="location-display" data-testid="location-display">
-          <p>{selectedCity},</p>
-          <p>{selectedState},</p>
-          <p>{selectedCountry}</p>
+          <p>{`${selectedCity}, ${selectedState}, ${selectedCountry}`}</p>
         </div>
       )}
     </div>
