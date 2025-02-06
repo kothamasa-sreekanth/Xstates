@@ -56,6 +56,10 @@ const LocationSelector = () => {
     }
   };
 
+  useEffect(() => {
+    console.log("Selected Location:", selectedCity, selectedState, selectedCountry);
+  }, [selectedCity, selectedState, selectedCountry]);
+
   return (
     <div className="container">
       <h2>Location Selector</h2>
@@ -102,8 +106,8 @@ const LocationSelector = () => {
 
       {/* Fixed Display of Selected Location */}
       {selectedCity && selectedState && selectedCountry && (
-        <div className="location-display" data-testid="location-display">
-          <p>{`${selectedCity}, ${selectedState}, ${selectedCountry}`}</p>
+        <div className="location-display" data-testid="selected-location">
+          <p>{`${selectedCity}, ${selectedState}, ${selectedCountry}`.trim()}</p>
         </div>
       )}
     </div>
