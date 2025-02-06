@@ -101,12 +101,12 @@ const LocationSelector = () => {
       </div>
 
       {/* Display Selected Location */}
+   {/* Display Selected Location */}
       {selectedCity && (
-        <div className="location-display">
-          <h3>{selectedCity}</h3>
-          <p>
-            {selectedState}, <span className="faded">{selectedCountry}</span>
-          </p>
+        <div className="location-display" data-testid="location-display">
+          <p>{selectedCity},</p>
+          <p>{selectedState},</p>
+          <p>{selectedCountry}</p>
         </div>
       )}
     </div>
